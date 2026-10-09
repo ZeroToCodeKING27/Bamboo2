@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | Bamboo Fencing</title>
+<meta name="description" content="Bamboo fencing services: natural pole fences, split bamboo screens, horizontal slat fencing, decorative panels and installation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{fontFamily:{sans:['"Bricolage Grotesque"','system-ui','sans-serif']},colors:{leaf:'#22c55e',moss:'#15803d',deep:'#052e16'}}}}
+</script>
+<style>
+@keyframes sway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+@keyframes rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes drift{0%{transform:translate(0,-10%) rotate(0)}100%{transform:translate(-40px,110vh) rotate(260deg)}}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.stalk{transform-origin:bottom center;animation:rise 1.4s cubic-bezier(.2,.8,.2,1) both,sway 6s ease-in-out infinite}
+.leaf{position:absolute;top:-20px;width:14px;height:34px;background:#22c55e;border-radius:100% 0 100% 0;opacity:.7;animation:drift linear infinite}
+.hero-in>*{animation:up .9s cubic-bezier(.2,.8,.2,1) both}
+.hero-in>*:nth-child(2){animation-delay:.15s}
+.reveal{opacity:0;transform:translateY(24px);transition:all .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.on{opacity:1;transform:none}
+.svc{position:relative;overflow:hidden;border-radius:1rem;background:#000;color:#fff;transition:transform .4s}
+.svc:hover{transform:translateY(-6px)}
+.svc .tex{position:absolute;inset:0;opacity:.28;transition:opacity .5s,transform .8s;transform:scale(1)}
+.svc:hover .tex{opacity:.6;transform:scale(1.08)}
+.svc .tx{position:relative}
+.t-poles{background:repeating-linear-gradient(90deg,#166534 0 26px,#052e16 26px 29px,#22c55e 29px 33px)}
+.t-split{background:repeating-linear-gradient(90deg,#86efac 0 7px,#14532d 7px 9px)}
+.t-slat{background:repeating-linear-gradient(0deg,#15803d 0 22px,#000 22px 26px)}
+.t-weave{background:repeating-linear-gradient(45deg,#16a34a 0 8px,#052e16 8px 10px),repeating-linear-gradient(-45deg,#bbf7d0 0 8px,#14532d 8px 10px);background-blend-mode:multiply}
+.t-leaf{background:radial-gradient(circle at 20% 80%,#22c55e 0 12%,transparent 13%),radial-gradient(circle at 70% 30%,#15803d 0 18%,transparent 19%),radial-gradient(circle at 90% 90%,#86efac 0 10%,transparent 11%),#052e16}
+.t-tool{background:repeating-linear-gradient(135deg,#22c55e 0 3px,transparent 3px 22px),#052e16}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body class="bg-white text-black font-sans antialiased">
+
+<!-- Nav -->
+<header class="fixed top-0 inset-x-0 z-50 bg-black/85 backdrop-blur text-white">
+ <div class="max-w-6xl mx-auto flex items-center justify-between px-5 h-16">
+  <a href="index.html" class="flex items-center gap-2 font-extrabold text-lg">
+   <svg width="22" height="22" viewBox="0 0 22 22"><rect x="3" y="2" width="4" height="18" rx="2" fill="#22c55e"/><rect x="9" y="5" width="4" height="15" rx="2" fill="#fff"/><rect x="15" y="1" width="4" height="19" rx="2" fill="#22c55e"/></svg>
+   Bamboo Fencing
+  </a>
+  <nav class="hidden md:flex gap-8 text-sm text-white/80">
+      <a class="hover:text-leaf" href="index.html">Home</a><a class="hover:text-leaf" href="about.html">About</a><a class="hover:text-leaf" href="Service.html">Services</a><a class="hover:text-leaf" href="contact.html">Contact</a>
+  </nav>
+  <a href="tel:+27624260290" class="hidden sm:inline-block bg-leaf text-black font-semibold text-sm px-4 py-2 rounded-full hover:bg-white transition">062 426 0290</a>
+  <button id="menu" aria-label="Menu" class="md:hidden p-2"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+ </div>
+ <div id="mobile" class="hidden md:hidden px-5 pb-4 flex-col gap-3 text-white/90">
+  <a href="index.html">Home</a><a href="service.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+ </div>
+</header>
+
+<!-- Page header -->
+<section class="relative overflow-hidden bg-black text-white pt-36 pb-24">
+ <div id="grove" class="absolute inset-0 flex items-end justify-around pointer-events-none" aria-hidden="true"></div>
+ <div id="leaves" class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+ <div class="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-transparent"></div>
+ <div class="relative max-w-6xl mx-auto px-5 hero-in">
+  <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight leading-[1.02]">Bamboo fencing for every space.</h1>
+  <p class="mt-5 text-lg text-white/75 max-w-xl">Privacy screens, boundaries and decorative borders, supplied and installed.</p>
+ </div>
+</section>
+
+<!-- Benefits -->
+<section class="max-w-6xl mx-auto px-5 pt-24">
+ <div class="grid md:grid-cols-3 gap-6">
+  <div class="reveal bg-black text-white rounded-2xl p-8 hover:bg-deep transition"><svg class="mb-5" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#22c55e" stroke-width="2"><rect x="8" y="16" width="24" height="18" rx="3"/><path d="M13 16v-4a7 7 0 0 1 14 0v4"/></svg><h3 class="text-xl font-bold">Privacy</h3><p class="mt-2 text-white/65">Choose how open or solid your fence is.</p></div>
+  <div class="reveal bg-black text-white rounded-2xl p-8 hover:bg-deep transition"><svg class="mb-5" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#22c55e" stroke-width="2"><path d="M6 34 20 6l14 28zM20 16v10"/></svg><h3 class="text-xl font-bold">Decoration</h3><p class="mt-2 text-white/65">Natural texture that suits gardens and patios.</p></div>
+  <div class="reveal bg-black text-white rounded-2xl p-8 hover:bg-deep transition"><svg class="mb-5" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#22c55e" stroke-width="2"><path d="M8 32C8 16 18 8 32 8c0 14-8 24-24 24zM8 32 22 18"/></svg><h3 class="text-xl font-bold">Eco-friendly</h3><p class="mt-2 text-white/65">Sustainable bamboo, a lighter choice than timber.</p></div>
+ </div>
+</section>
+
+<!-- Services -->
+<section class="max-w-6xl mx-auto px-5 py-24">
+ <div class="reveal max-w-2xl">
+  <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">What we offer</h2>
+  <p class="mt-4 text-lg text-black/65">Pick a style, or tell us what you need and we'll recommend one.</p>
+ </div>
+ <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <article class="reveal svc"><div class="tex t-poles"></div><div class="tx p-8 pt-32"><h3 class="text-2xl font-bold">Natural pole fencing</h3><p class="mt-2 text-white/75">Whole round bamboo poles for strong, bold boundaries.</p><a href="contact.html" class="inline-block mt-5 text-leaf font-semibold">Get a quote</a></div></article>
+  <article class="reveal svc"><div class="tex t-split"></div><div class="tx p-8 pt-32"><h3 class="text-2xl font-bold">Split bamboo screens</h3><p class="mt-2 text-white/75">Close-set slats for maximum privacy.</p><a href="contact.html" class="inline-block mt-5 text-leaf font-semibold">Get a quote</a></div></article>
+  <article class="reveal svc"><div class="tex t-slat"></div><div class="tx p-8 pt-32"><h3 class="text-2xl font-bold">Horizontal slat fencing</h3><p class="mt-2 text-white/75">A clean, modern look for patios and pool areas.</p><a href="contact.html" class="inline-block mt-5 text-leaf font-semibold">Get a quote</a></div></article>
+  <article class="reveal svc"><div class="tex t-weave"></div><div class="tx p-8 pt-32"><h3 class="text-2xl font-bold">Woven decorative panels</h3><p class="mt-2 text-white/75">Patterned panels to add texture to walls and borders.</p><a href="contact.html" class="inline-block mt-5 text-leaf font-semibold">Get a quote</a></div></article>
+  <article class="reveal svc"><div class="tex t-leaf"></div><div class="tx p-8 pt-32"><h3 class="text-2xl font-bold">Garden borders</h3><p class="mt-2 text-white/75">Decorative bamboo edging to define beds and paths.</p><a href="contact.html" class="inline-block mt-5 text-leaf font-semibold">Get a quote</a></div></article>
+  <article class="reveal svc"><div class="tex t-tool"></div><div class="tx p-8 pt-32"><h3 class="text-2xl font-bold">Supply and installation</h3><p class="mt-2 text-white/75">We measure, supply and fit your fence neatly.</p><a href="contact.html" class="inline-block mt-5 text-leaf font-semibold">Get a quote</a></div></article>
+ </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-deep text-white py-24">
+ <div class="reveal max-w-4xl mx-auto px-5 text-center">
+  <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Not sure which style suits you?</h2>
+  <p class="mt-4 text-lg text-white/70">Tell us about your space and we'll recommend one.</p>
+  <div class="mt-8 flex flex-wrap gap-4 justify-center">
+   <a href="tel:+27624260290" class="bg-leaf text-black font-semibold px-7 py-3.5 rounded-full hover:bg-white transition">Call 062 426 0290</a>
+   <a href="contact.html" class="border border-white/40 font-semibold px-7 py-3.5 rounded-full hover:bg-white hover:text-black transition">Send a message</a>
+  </div>
+ </div>
+</section>
+
+<footer class="bg-black text-white/60 text-sm py-8">
+ <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row justify-between gap-2">
+  <p>&copy; <span id="yr"></span> Bamboo Fencing. All rights reserved.</p>
+  <p>062 426 0290 &middot; takudzwachauke073@gmail.com</p>
+ </div>
+</footer>
+
+<script>
+const g=document.getElementById('grove');
+for(let i=0;i<14;i++){
+ const h=50+Math.random()*45,w=10+Math.random()*12,d=Math.random()*1.2;
+ const s=document.createElement('div');
+ s.className='stalk relative rounded-t-full';
+ s.style.cssText=`height:${h}%;width:${w}px;animation-delay:${d}s,${d}s;opacity:${.35+Math.random()*.55};background:linear-gradient(90deg,#14532d,#22c55e 45%,#166534)`;
+ for(let n=1;n<7;n++){const k=document.createElement('i');k.style.cssText=`position:absolute;left:-2px;right:-2px;height:4px;top:${n*14}%;background:#052e16;border-radius:2px`;s.appendChild(k)}
+ g.appendChild(s);
+}
+const L=document.getElementById('leaves');
+for(let i=0;i<10;i++){const l=document.createElement('span');l.className='leaf';l.style.cssText=`left:${Math.random()*100}%;animation-duration:${9+Math.random()*10}s;animation-delay:-${Math.random()*12}s;transform:scale(${.6+Math.random()})`;L.appendChild(l)}
+const m=document.getElementById('mobile');
+document.getElementById('menu').onclick=()=>{m.classList.toggle('hidden');m.classList.toggle('flex')};
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
